@@ -10,17 +10,14 @@ import bg from '../../public/images/citro.jpeg'
 export default function HomePage(){
 	return (
         <div className="w-screen bg-custom-white relative font-regular antialiased">
+            <div className="fixed w-full h-full overflow-hidden z-10">
+                <video controls={false} loop autoPlay muted>
+                    <source src="/video/videoplayback.mp4" type="video/webm" />
+                </video>
+            </div>
             <Navbar />
             <div className="h-screen-80 w-full relative z-20">
-                <div className="h-full bg-custom-green z-40 w-full relative overflow-visible flex justify-center">
-                    <div className="absolute w-full h-full overflow-hidden">
-                        <video controls={false} loop autoPlay muted>
-                            <source src="/video/videoplayback.mp4" type="video/webm" />
-                        </video>
-                    </div>
-                    <div className="absolute z-10 w-full h-full bg-custom-green bg-opacity-70">
-
-                    </div>
+                <div className="h-full bg-custom-green bg-opacity-70 z-40 w-full relative overflow-visible flex justify-center">
                     <div className="w-full relative z-30" 
                         style={{
                             maxWidth: 1100 
@@ -55,7 +52,7 @@ export default function HomePage(){
                 </div>
                 
             </div>
-            <div className="w-full h-screen-80 flex justify-center relative z-10">
+            <div className="w-full h-screen-80 flex justify-center relative z-10 bg-white">
                 <div className="w-full relative z-30" 
                     style={{
                         maxWidth: 1100 
@@ -72,7 +69,7 @@ export default function HomePage(){
                     </div>
                 </div>
             </div>
-            <div className="w-full h-screen-80 relative flex bg-custom-green justify-center">
+            <div className="w-full h-screen-80 relative flex bg-custom-green justify-center z-20">
                 <div className="absolute h-full w-full opacity-20">
                     <Image
                         alt="bg"
@@ -102,7 +99,7 @@ export default function HomePage(){
                 </div>
                 
             </div>
-            <div className="w-full h-fit-content relative">
+            <div className="w-full h-fit-content relative z-20 pb-20 bg-white">
                 <div className="w-full">
                     <div className="w-1/2 h-full p-20 flex items-center justify-center">
                         <div className="w-full h-full flex flex-col justify-center">
@@ -133,7 +130,7 @@ export default function HomePage(){
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex mt-24">
+                <div className="w-full flex mt-24 bg-white">
                     <div className="w-2/3 flex justify-end">
                         <div className="w-4/6 pr-20">
                             <h2 className="text-xl font-bold">Citronella oil</h2>
@@ -157,7 +154,7 @@ export default function HomePage(){
                 </div>
             </div>
             {/* footer */}
-            <div className="w-full h-fit-content mt-20 relative items-end">
+            <div className="w-full h-fit-content relative items-end z-20">
                 <div className="h-56 bg-custom-green w-full relative flex justify-center">
                     <div className="w-full h-full" 
                         style={{
