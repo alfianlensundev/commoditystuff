@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {BsWhatsapp} from 'react-icons/bs'
-
+import Image from 'next/image'
+import logo from '../../../public/images/cs.png'
 type NavTypes = {
     title: string,
     route?: string
@@ -25,18 +26,29 @@ export default function Navbar(){
         },
     ]
     return (
-        <div className="w-full z-30 bg-custom-green h-20 fixed top flex px-20 justify-center">
+        <div className="w-full z-40 bg-custom-green h-20 fixed top flex px-20 justify-center">
             <div className="w-full flex items-center justify-center " style={{
                 maxWidth: 1100 
             }}>
-                <div className="w-1/4  text-white ">
-                    <div className="w-full font-bold text-xl">CommodityStuff</div>
-                    <div className="text-xs">Lorem Ipsum dolor</div>
+                <div className="z-30 pr-4 pt-3 relative">
+                        <Image
+                            height={50}
+                            width={50}
+                            alt="pp"
+                            src={logo} 
+                            className="z-30"
+                        />
+                    </div>
+                <div className="w-1/4 text-white ">
+                    <div className="w-full font-bold text-xl">Commodity</div>
+                    <div className="text-xs">Stuff</div>
                 </div>
                 <div className="flex flex-1 relative px-10 text-white ">
                     {listNav.map((nav, idx) => {
                         return (
-                            <div className="w-24 flex flex-col items-center justify-center h-12 text-sm relative cursor-pointer ">
+                            <div
+                                key={idx.toString()} 
+                                className="w-24 flex flex-col items-center justify-center h-12 text-sm relative cursor-pointer ">
                                 <div className={activeNav == idx ? `font-bold` : 'text-gray-300 text-sm cursor-pointer hover:text-white hover:text-regular'}>
                                     {nav.title}
                                 </div>

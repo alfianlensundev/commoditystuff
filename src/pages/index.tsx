@@ -11,9 +11,17 @@ export default function HomePage(){
 	return (
         <div className="w-screen bg-custom-white relative font-regular antialiased">
             <Navbar />
-            <div className="h-screen-80 w-full relative z-10">
-                <div className="h-full bg-custom-green w-full relative overflow-visible flex justify-center">
-                    <div className="w-full " 
+            <div className="h-screen-80 w-full relative z-20">
+                <div className="h-full bg-custom-green z-40 w-full relative overflow-visible flex justify-center">
+                    <div className="absolute w-full h-full overflow-hidden">
+                        <video controls={false} loop autoPlay muted>
+                            <source src="/video/videoplayback.mp4" type="video/webm" />
+                        </video>
+                    </div>
+                    <div className="absolute z-10 w-full h-full bg-custom-green bg-opacity-70">
+
+                    </div>
+                    <div className="w-full relative z-30" 
                         style={{
                             maxWidth: 1100 
                         }}
@@ -25,20 +33,21 @@ export default function HomePage(){
                             <div className="w-1/2 h-full  flex items-center">
                                 <div className="w-4/5">
                                     <h1 className="text-5xl font-bold text-white leading-normal">Lorem & Ipum Dolor </h1>
-                                    <p className="text-white font-light leading-relaxed text-green-100 mt-4">lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et</p>
+                                    <p className="text-white leading-relaxed text-green-100 mt-4">lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et</p>
                                     <div className="w-full">
                                         <button className="bg-white mt-2 font-bold text-custom-green mt-10 justify-center w-fit-content px-10 h-12 flex items-center">Let' Get Started</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute z-30 w-screen-h-70 h-screen-70 left-5 bottom-min-h-15">
+                        <div className="absolute z-40 w-screen-h-70 h-screen-70 left-5 bottom-min-h-15">
                             <Image
                                 alt="pp"
                                 src={vco} 
                                 objectFit="contain"
                                 objectPosition="bottom"
                                 layout="fill"
+                                className="z-30"
                             />
                         </div>
                     </div>
@@ -46,8 +55,8 @@ export default function HomePage(){
                 </div>
                 
             </div>
-            <div className="w-full h-screen-80 flex justify-center relative">
-                <div className="w-full " 
+            <div className="w-full h-screen-80 flex justify-center relative z-10">
+                <div className="w-full relative z-30" 
                     style={{
                         maxWidth: 1100 
                     }}
